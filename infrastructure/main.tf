@@ -6,6 +6,9 @@ terraform {
     hetznerdns = {
       source = "timohirt/hetznerdns"
     }
+    nixos = {
+      source = "corpix/nixos"
+    }
   }
 }
 

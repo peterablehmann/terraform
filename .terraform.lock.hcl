@@ -1,6 +1,19 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
+provider "registry.terraform.io/corpix/nixos" {
+  version     = "0.0.14"
+  constraints = "0.0.14"
+  hashes = [
+    "h1:2CI6xzHEDQcUry2HoPBiV///bUYqowCccHBkswIrLKs=",
+    "zh:2c108742fa8b9554dc8ec0f818183e46457d5c968a85e3812dc18a61fbbeaad7",
+    "zh:3c18769e07b2191b293f139383d11ddd2e2c9652723898c9eb07118588b0f4a3",
+    "zh:c322436cb5a494678227e6f4b9f926b60593274abcf6f48cd30872181d588c17",
+    "zh:c464570c2e9181151b7ae03ab25dc0857e92759bfdf604a9fb67306724f94f94",
+    "zh:fbd1fee2c9df3aa19cf8851ce134dea6e45ea01cb85695c1726670c285797e25",
+  ]
+}
+
 provider "registry.terraform.io/hetznercloud/hcloud" {
   version     = "1.42.0"
   constraints = "1.42.0"

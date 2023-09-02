@@ -8,11 +8,9 @@ terraform {
       source  = "timohirt/hetznerdns"
       version = "2.2.0"
     }
-    nixos = {
-      source  = "corpix/nixos"
-      version = "0.0.14"
-    }
   }
+
+  backend "pg" { }
 }
 
 provider "hcloud" {

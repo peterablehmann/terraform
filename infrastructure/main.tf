@@ -6,9 +6,6 @@ terraform {
     hetznerdns = {
       source = "timohirt/hetznerdns"
     }
-    nixos = {
-      source = "corpix/nixos"
-    }
   }
 }
 
@@ -26,7 +23,6 @@ resource "hcloud_server" "infra_xnee_de" {
 
   image     = "debian-12"
   ssh_keys  = ["infra"]
-  user_data = file("cloud-init/nixos.yml")
 }
 
 resource "hetznerdns_record" "infra_xnee_de_v4" {

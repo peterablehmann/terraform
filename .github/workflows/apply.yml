@@ -13,7 +13,7 @@ env:
   HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
 
 jobs:
-  build:
+  terraform-apply:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code

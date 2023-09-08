@@ -10,7 +10,7 @@ output "uic_fahrzeugnummer_de_zone_id" {
   value = module.uic_fahrzeugnummer_de.zone_id
 }
 
-output "zone_xnee_de_idzone_id" {
+output "zone_xnee_de_zone_id" {
   value = module.xnee_de.zone_id
 }
 

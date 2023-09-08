@@ -19,29 +19,11 @@ provider "hcloud" {
 provider "hetznerdns" {
 }
 
-module "bigdriver_net" {
-  source = "./zones/bigdriver_net"
+module "zones" {
+  source = "./zones"
 }
 
-module "lehmann_zone" {
-  source = "./zones/lehmann_zone"
-}
 
-module "uic_fahrzeugnummer_de" {
-  source = "./zones/uic_fahrzeugnummer_de"
-}
-
-module "xnee_de" {
-  source = "./zones/xnee_de"
-}
-
-module "xnee_net" {
-  source = "./zones/xnee_net"
-}
-
-module "xxhe_de" {
-  source = "./zones/xxhe_de"
-}
 
 module "infrastructure" {
   source = "./infrastructure"

@@ -10,7 +10,7 @@ terraform {
     }
   }
 
-  backend "pg" { }
+  backend "pg" {}
 }
 
 provider "hcloud" {

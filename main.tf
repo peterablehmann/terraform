@@ -23,15 +23,13 @@ module "zones" {
   source = "./zones"
 }
 
-
-
 module "infrastructure" {
   source = "./infrastructure"
 
-  zone_bigdriver_net_id         = module.bigdriver_net.zone_id
-  zone_lehmann_zone_id          = module.lehmann_zone.zone_id
-  zone_uic_fahrzeugnummer_de_id = module.uic_fahrzeugnummer_de.zone_id
-  zone_xnee_de_id               = module.xnee_de.zone_id
-  zone_xnee_net_id              = module.xnee_net.zone_id
-  zone_xxhe_de_id               = module.xxhe_de.zone_id
+  zone_bigdriver_net_id         = module.zones.bigdriver_net_zone_id
+  zone_lehmann_zone_id          = module.zones.lehmann_zone_zone_id
+  zone_uic_fahrzeugnummer_de_id = module.zones.uic_fahrzeugnummer_de_zone_id
+  zone_xnee_de_id               = module.zones.xnee_de_zone_id
+  zone_xnee_net_id              = module.zones.xnee_net_zone_id
+  zone_xxhe_de_id               = module.zones.xxhe_de_zone_id
 }

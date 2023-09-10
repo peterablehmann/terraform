@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    hetznerdns = {
-      source = "timohirt/hetznerdns"
-    }
-  }
-}
-
 module "bigdriver_net" {
   source = "./bigdriver_net"
 }

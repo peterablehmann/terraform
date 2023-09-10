@@ -8,6 +8,10 @@ terraform {
       source  = "timohirt/hetznerdns"
       version = "2.2.0"
     }
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.0.2"
+    }
   }
 
   backend "pg" {}

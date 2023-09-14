@@ -23,6 +23,12 @@ provider "hcloud" {
 provider "hetznerdns" {
 }
 
+resource "hcloud_ssh_key" "peter_kee" {
+  name = "peter_kee"
+  public_key = file("ssh/ed25519_peter@kee.pub")
+  
+}
+
 module "zones" {
   source = "./zones"
 }

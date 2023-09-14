@@ -20,11 +20,6 @@ terraform {
 provider "hcloud" {
 }
 
-resource "hcloud_ssh_key" "infra" {
-  name       = "peter@kee"
-  public_key = file("ssh/ed25519_peter@kee.pub")
-}
-
 provider "hetznerdns" {
 }
 

@@ -1,7 +1,0 @@
-#cloud-config
-
-apt:
-  sources:
-    docker:
-      source: 'deb [arch=\"$(dpkg --print-architecture)\" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $RELEASE stable'
-      keyserver: https://download.docker.com/linux/ubuntu/gpg

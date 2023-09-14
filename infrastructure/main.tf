@@ -27,7 +27,7 @@ resource "hcloud_server" "infra_xnee_de" {
   delete_protection  = false
   rebuild_protection = false
 
-  image     = "debian-12"
+  image     = "ubuntu-22.04"
   ssh_keys  = ["infra"]
 }
 

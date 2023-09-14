@@ -28,7 +28,8 @@ resource "hcloud_server" "infra_xnee_de" {
   rebuild_protection = false
 
   image     = "ubuntu-22.04"
-  ssh_keys  = ["infra"]
+  user_data = file("cloud-init/docker.yaml")
+  ssh_keys  = ["infra", "peter_kee"]
 }
 
 resource "hetznerdns_record" "infra_xnee_de_v4" {

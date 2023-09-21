@@ -1,3 +1,3 @@
 variable "zone_xnee_de_id" {
-    type = string
+  type = string
 }

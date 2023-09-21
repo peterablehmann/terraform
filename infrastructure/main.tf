@@ -1,15 +1,15 @@
 terraform {
   required_providers {
     hcloud = {
-      source = "hetznercloud/hcloud"
+      source  = "hetznercloud/hcloud"
       version = "1.42.1"
     }
     hetznerdns = {
-      source = "timohirt/hetznerdns"
+      source  = "timohirt/hetznerdns"
       version = "2.2.0"
     }
     docker = {
-      source = "kreuzwerker/docker"
+      source  = "kreuzwerker/docker"
       version = "3.0.2"
     }
   }

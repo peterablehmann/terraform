@@ -178,7 +178,7 @@ resource "docker_container" "portainer" {
 
   # Edge
 
-  label {
+  labels {
     label = "traefik.http.routers.edge.rule"
     value = "Host(`edge.xnee.de`)"
   }
@@ -190,11 +190,11 @@ resource "docker_container" "portainer" {
     label = "traefik.http.services.edge.loadbalancer.server.port"
     value = "8000"
   }
-  label {
+  labels {
     label = "traefik.http.routers.edge.service"
     value = "edge"
   }
-  label {
+  labels {
     label = "traefik.http.routers.edge.tls.certresolver"
     value = "leresolver"
   }

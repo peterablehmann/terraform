@@ -25,3 +25,4 @@ write_files:
       "experimental": true,
       "ip6tables": true
       }
+    path: /etc/docker/daemon.json

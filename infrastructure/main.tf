@@ -28,7 +28,7 @@ resource "hcloud_server" "infra_xnee_de" {
   rebuild_protection = false
 
   image     = "ubuntu-22.04"
-  user_data = file("cloud-init/docker.yaml")
+  user_data = file(".cloudinit/docker.yaml")
   ssh_keys  = ["infra", "peter_kee"]
 }
 

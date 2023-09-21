@@ -109,3 +109,93 @@ resource "docker_container" "traefik" {
     value = "https"
   }
 }
+
+# Portainer
+
+resource "hetznerdns_record" "CNAME_portainer_xnee_de" {
+  zone_id = var.zone_xnee_de_id
+  name    = "portainer"
+  value   = "infra.xnee.de."
+  type    = "CNAME"
+}
+
+resource "hetznerdns_record" "CNAME_edge_xnee_de" {
+  zone_id = var.zone_xnee_de_id
+  name    = "edge"
+  value   = "infra.xnee.de."
+  type    = "CNAME"
+}
+
+resource "docker_image" "portainer" {
+  name = "portainer/portainer-ee:2.19.1-alpine"
+}
+
+resource "docker_volume" "portainer_data" {
+  name = "portainer_data"
+}
+
+resource "docker_container" "portainer" {
+  name  = "portainer"
+  image = docker_image.portainer.image_id
+  mounts {
+    target    = "/var/run/docker.sock"
+    type      = "bind"
+    source    = "/var/run/docker.sock"
+    read_only = true
+  }
+
+  volumes {
+    container_path = "/data"
+    volume_name    = "portainer_data"
+  }
+
+  # Frontend
+
+  labels {
+    label = "traefik.enable"
+    value = "true"
+  }
+  labels {
+    label = "traefik.http.routers.frontend.rule"
+    value = "Host(`portainer.xnee.de`)"
+  }
+  labels {
+    label = "traefik.http.routers.frontend.entrypoints"
+    value = "websecure"
+  }
+  labels {
+    label = "traefik.http.services.frontend.loadbalancer.server.port"
+    value = "9000"
+  }
+  label {
+    label = "traefik.http.routers.frontend.service"
+    value = "frontend"
+  }
+  label {
+    label = "traefik.http.routers.frontend.tls.certresolver"
+    value = "leresolver"
+  }
+
+  # Edge
+
+  label {
+    label = "traefik.http.routers.edge.rule"
+    value = "Host(`edge.xnee.de`)"
+  }
+  labels {
+    label = "traefik.http.routers.edge.entrypoints"
+    value = "websecure"
+  }
+  labels {
+    label = "traefik.http.services.edge.loadbalancer.server.port"
+    value = "8000"
+  }
+  label {
+    label = "traefik.http.routers.edge.service"
+    value = "edge"
+  }
+  label {
+    label = "traefik.http.routers.edge.tls.certresolver"
+    value = "leresolver"
+  }
+}

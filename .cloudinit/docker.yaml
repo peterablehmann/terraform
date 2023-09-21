@@ -21,7 +21,7 @@ write_files:
       {
       "userland-proxy": false,
       "ipv6": true,
-      "fixed-cidr-v6": "fd00:111::/64"
+      "fixed-cidr-v6": "fd00:111::/64",
       "experimental": true,
       "ip6tables": true
       }

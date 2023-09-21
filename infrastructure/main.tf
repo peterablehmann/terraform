@@ -15,6 +15,7 @@ terraform {
   }
 }
 
+
 # provider "docker" {
 #   host     = "ssh://root@infra.xnee.de:22"
 #   ssh_opts = ["-o", "StrictHostKeyChecking=no", "-o", "UserKnownHostsFile=/dev/null"]

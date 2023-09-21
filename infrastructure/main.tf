@@ -167,11 +167,11 @@ resource "docker_container" "portainer" {
     label = "traefik.http.services.frontend.loadbalancer.server.port"
     value = "9000"
   }
-  label {
+  labels {
     label = "traefik.http.routers.frontend.service"
     value = "frontend"
   }
-  label {
+  labels {
     label = "traefik.http.routers.frontend.tls.certresolver"
     value = "leresolver"
   }

@@ -18,6 +18,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+      - name: Setup SSH-Key(s)
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_ED25519_INFRA }}
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v2
       - name: Terraform init

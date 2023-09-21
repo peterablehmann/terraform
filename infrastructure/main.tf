@@ -62,28 +62,25 @@ resource "docker_volume" "traefik" {
 resource "docker_container" "traefik" {
   name  = "traefik"
   image = docker_image.traefik.image_id
-  mounts = [
-    {
-      target    = "/var/run/docker.sock"
-      type      = "bind"
-      source    = "/var/run/docker.sock"
-      read_only = true
-    }
-  ]
-  volumes = [
-    {
-      container_path = "/acme"
-      volume_name    = "traefik_acme"
-    }
-  ]
-  ports = [
-    {
-      internal = 80
-    },
-    {
-      internal = 443
-    }
-  ]
+  mounts {
+    target    = "/var/run/docker.sock"
+    type      = "bind"
+    source    = "/var/run/docker.sock"
+    read_only = true
+  }
+
+  volumes {
+    container_path = "/acme"
+    volume_name    = "traefik_acme"
+  }
+
+  ports {
+    internal = 80
+  }
+  ports {
+    internal = 443
+  }
+
   command = [
     "--entrypoints.web.address=:80",
     "--entrypoints.websecure.address=:443",
@@ -94,22 +91,21 @@ resource "docker_container" "traefik" {
     "--certificatesresolvers.leresolver.acme.storage=/acme/acme.json",
     "--certificatesresolvers.leresolver.acme.httpchallenge.entrypoint=web"
   ]
-  labels = [
-    {
-      label = "traefik.http.routers.http-catchall.rule"
-      value = "hostregexp(`{host:.+}`)"
-    },
-    {
-      label = "traefik.http.routers.http-catchall.entrypoints"
-      value = "web"
-    },
-    {
-      label = "traefik.http.routers.http-catchall.middlewares"
-      value = "redirect-to-https"
-    },
-    {
-      label = "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme"
-      value = "https"
-    }
-  ]
+
+  labels {
+    label = "traefik.http.routers.http-catchall.rule"
+    value = "hostregexp(`{host:.+}`)"
+  }
+  labels {
+    label = "traefik.http.routers.http-catchall.entrypoints"
+    value = "web"
+  }
+  labels {
+    label = "traefik.http.routers.http-catchall.middlewares"
+    value = "redirect-to-https"
+  }
+  labels {
+    label = "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme"
+    value = "https"
+  }
 }

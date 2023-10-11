@@ -100,3 +100,18 @@ resource "hetznerdns_record" "AAAA_syncthing_xnee_de" {
   value   = "2a01:4f9:c011:aeba::1"
   type    = "AAAA"
 }
+
+# proxmox.xnee.de
+resource "hetznerdns_record" "A_proxmox_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name    = "proxmox"
+  value   = "65.108.0.24"
+  type    = "A"
+}
+
+resource "hetznerdns_record" "A_proxmox_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name    = "proxmox"
+  value   = "2a01:4f9:6a:4f6f::1"
+  type    = "AAAA"
+}

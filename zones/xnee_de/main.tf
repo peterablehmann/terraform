@@ -109,7 +109,7 @@ resource "hetznerdns_record" "A_proxmox_xnee_de" {
   type    = "A"
 }
 
-resource "hetznerdns_record" "A_proxmox_xnee_de" {
+resource "hetznerdns_record" "AAAA_proxmox_xnee_de" {
   zone_id = hetznerdns_zone.xnee_de.id
   name    = "proxmox"
   value   = "2a01:4f9:6a:4f6f::1"

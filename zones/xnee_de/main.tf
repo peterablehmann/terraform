@@ -116,17 +116,11 @@ resource "hetznerdns_record" "AAAA_proxmox_xnee_de" {
   type    = "AAAA"
 }
 
-# backup.xnee.de
-resource "hetznerdns_record" "A_backup_xnee_de" {
+# proxmox-dhcp.xnee.de
+resource "hetznerdns_record" "AAAA_proxmox_dhcp_xnee_de" {
   zone_id = hetznerdns_zone.xnee_de.id
-  name    = "backup"
-  value   = "49.12.105.38"
-  type    = "A"
-}
-
-resource "hetznerdns_record" "AAAA_backup_xnee_de" {
-  zone_id = hetznerdns_zone.xnee_de.id
-  name    = "backup"
-  value   = "2a01:4f8:c012:15ce::1"
+  name    = "proxmox-dhcp"
+  value   = "2a01:4f9:6a:4f6f::5"
   type    = "AAAA"
 }
+

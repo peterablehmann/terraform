@@ -125,7 +125,7 @@ resource "hetznerdns_record" "AAAA_proxmox_dhcp_xnee_de" {
 }
 
 #stonks-ticker
-resource "hetznerdns_record" "AAAA_proxmox_dhcp_xnee_de" {
+resource "hetznerdns_record" "AAAA_stonks_ticker_xnee_de" {
   zone_id = hetznerdns_zone.xnee_de.id
   name    = "stonks-ticker"
   value   = "2a01:4f9:6a:4f6f::6"

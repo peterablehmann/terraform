@@ -47,7 +47,7 @@ resource "hetznerdns_record" "TXT_SPF_xnee_de" {
 resource "hetznerdns_record" "TXT__dmarc_xnee_de" {
   zone_id = hetznerdns_zone.xnee_de.id
   name    = "_dmarc"
-  value   = "\"v=DMARC1;p=quarantine;sp=quarantine;pct=100;rua=mailto:postmaster@xnee.de;ruf=mailto:postmaster@xnee.de;adkim=s;aspf=s;\""
+  value   = "\"v=DMARC1;p=quarantine;sp=quarantine;pct=100;rua=mailto:dmarc@xnee.net;ruf=mailto:dmarc@xnee.net;adkim=s;aspf=s;\""
   type    = "TXT"
 }
 

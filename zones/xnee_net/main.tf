@@ -88,7 +88,7 @@ resource "hetznerdns_record" "CNAME_autoconfig_xnee_net" {
 
 # Grafana
 resource "hetznerdns_record" "AAAA_grafana_xnee_net" {
-  zone_id = hetznerdns_zone.xnee_net.zone_id
+  zone_id = hetznerdns_zone.xnee_net.id
   name    = "grafana"
   value   = "2003:cb:cf0e:9d00:1c8d:2249:e77c:699f"
   type    = "AAAA"

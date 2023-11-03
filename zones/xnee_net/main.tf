@@ -47,7 +47,7 @@ resource "hetznerdns_record" "TXT_SPF_xnee_net" {
 resource "hetznerdns_record" "TXT__dmarc_xnee_net" {
   zone_id = hetznerdns_zone.xnee_net.id
   name    = "_dmarc"
-  value   = "\"v=DMARC1;p=quarantine;sp=quarantine;pct=100;rua=mailto:postmaster@xnee.de;ruf=mailto:postmaster@xnee.de;adkim=s;aspf=s;\""
+  value   = "\"v=DMARC1;p=quarantine;sp=quarantine;pct=100;rua=mailto:dmarc@xnee.net;ruf=mailto:dmarc@xnee.net;adkim=s;aspf=s;\""
   type    = "TXT"
 }
 
@@ -84,4 +84,12 @@ resource "hetznerdns_record" "CNAME_autoconfig_xnee_net" {
   name    = "autoconfig"
   value   = "mail.your-server.de."
   type    = "CNAME"
+}
+
+# Grafana
+resource "hetznerdns_record" "AAAA_grafana_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "grafana"
+  value   = "2003:cb:cf0e:9d00:1c8d:2249:e77c:699f"
+  type    = "AAAA"
 }

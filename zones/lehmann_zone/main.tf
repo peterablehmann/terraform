@@ -47,7 +47,7 @@ resource "hetznerdns_record" "TXT_SPF_lehmann_zone" {
 resource "hetznerdns_record" "TXT__dmarc_lehmann_zone" {
   zone_id = hetznerdns_zone.lehmann_zone.id
   name    = "_dmarc"
-  value   = "\"v=DMARC1;p=quarantine;sp=quarantine;pct=100;rua=mailto:postmaster@xnee.de;ruf=mailto:postmaster@xnee.de;adkim=s;aspf=s;\""
+  value   = "\"v=DMARC1;p=quarantine;sp=quarantine;pct=100;rua=mailto:dmarc@xnee.net;ruf=mailto:dmarc@xnee.net;adkim=s;aspf=s;\""
   type    = "TXT"
 }
 

@@ -89,7 +89,7 @@ resource "hetznerdns_record" "CNAME_autoconfig_xnee_net" {
 # ThinClients
 resource "hetznerdns_record" "AAAA_tc1_xnee_net" {
   zone_id = hetznerdns_zone.xnee_net.id
-  name    = "grafana"
+  name    = "tc1"
   value   = "2003:cb:cf15:a700:921b:eff:fe8f:625d"
   type    = "AAAA"
 }

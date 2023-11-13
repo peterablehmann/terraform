@@ -90,14 +90,14 @@ resource "hetznerdns_record" "CNAME_autoconfig_xnee_net" {
 resource "hetznerdns_record" "AAAA_tc1_xnee_net" {
   zone_id = hetznerdns_zone.xnee_net.id
   name    = "tc1"
-  value   = "2003:cb:cf15:a700:921b:eff:fe8f:625d"
+  value   = "2003:cb:cf45:df00:921b:eff:fe8f:625d"
   type    = "AAAA"
 }
 
 resource "hetznerdns_record" "AAAA_tc2_xnee_net" {
   zone_id = hetznerdns_zone.xnee_net.id
   name    = "tc2"
-  value   = "2003:cb:cf27:3800:921b:eff:fe5a:1cdb"
+  value   = "2003:cb:cf27:df00:921b:eff:fe5a:1cdb"
   type    = "AAAA"
 }
 

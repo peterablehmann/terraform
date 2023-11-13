@@ -86,6 +86,14 @@ resource "hetznerdns_record" "CNAME_autoconfig_xnee_net" {
   type    = "CNAME"
 }
 
+# Fritz!Box
+resource "hetznerdns_record" "CNAME_fritzbox_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "fritzbox"
+  value   = "pm50yyz373t4yr6i.myfritz.net."
+  type    = "CNAME"
+}
+
 # ThinClients
 resource "hetznerdns_record" "AAAA_tc1_xnee_net" {
   zone_id = hetznerdns_zone.xnee_net.id

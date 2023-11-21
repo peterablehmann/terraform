@@ -129,7 +129,7 @@ resource "hetznerdns_record" "CNAME_edge_xnee_de" {
 }
 
 resource "docker_image" "portainer" {
-  name = "portainer/portainer-ee:2.19.1-alpine"
+  name = "portainer/portainer-ee:2.19.3-alpine"
 }
 
 resource "docker_volume" "portainer_data" {

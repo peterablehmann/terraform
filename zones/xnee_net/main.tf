@@ -116,3 +116,11 @@ resource "hetznerdns_record" "CNAME_grafana_xnee_net" {
   value   = "tc2.xnee.net."
   type    = "CNAME"
 }
+
+# ntfy
+resource "hetznerdns_record" "CNAME_ntfy_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "ntfy"
+  value   = "tc2.xnee.net."
+  type    = "CNAME"
+}

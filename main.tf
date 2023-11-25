@@ -31,9 +31,3 @@ resource "hcloud_ssh_key" "peter_kee" {
 module "zones" {
   source = "./zones"
 }
-
-module "infrastructure" {
-  source = "./infrastructure"
-
-  zone_xnee_de_id = module.zones.xnee_de_zone_id
-}

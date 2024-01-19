@@ -93,3 +93,18 @@ resource "hetznerdns_record" "CNAME_fritzbox_xnee_net" {
   value   = "pm50yyz373t4yr6i.myfritz.net."
   type    = "CNAME"
 }
+
+#mns
+resource "hetznerdns_record" "A_mns_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "mns"
+  value   = "128.140.47.30"
+  type    = "A"
+}
+
+resource "hetznerdns_record" "AAAA_mns_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "mns"
+  value   = "2a01:4f8:c0c:5a5::1"
+  type    = "A"
+}

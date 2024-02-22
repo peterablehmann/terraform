@@ -108,10 +108,3 @@ resource "hetznerdns_record" "AAAA_mns_xnee_net" {
   value   = "2a01:4f8:1c1e:ad66::1"
   type    = "AAAA"
 }
-
-resource "hetznerdns_record" "A_minikube_xnee_net" {
-  zone_id = hetznerdns_zone.xnee_net.id
-  name    = "minikube"
-  value   = "23.88.97.108"
-  type    = "A"
-}

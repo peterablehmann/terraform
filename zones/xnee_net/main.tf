@@ -109,9 +109,23 @@ resource "hetznerdns_record" "AAAA_mns_xnee_net" {
   type    = "AAAA"
 }
 
+resource "hetznerdns_record" "CNAME_metrics_mns_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "metrics.mns"
+  value   = "mns"
+  type    = "CNAME"
+}
+
 resource "hetznerdns_record" "AAAA_monitoring_xnee_net" {
   zone_id = hetznerdns_zone.xnee_net.id
   name    = "monitoring"
   value   = "2a01:4f9:6a:4f6f::2:1"
   type    = "AAAA"
+}
+
+resource "hetznerdns_record" "CNAME_metrics_monitoring_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "metrics.monitoring"
+  value   = "monitoring"
+  type    = "CNAME"
 }

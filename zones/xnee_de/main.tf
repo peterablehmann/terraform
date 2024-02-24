@@ -131,3 +131,11 @@ resource "hetznerdns_record" "AAAA_stonks_ticker_xnee_de" {
   value   = "2a01:4f9:6a:4f6f::6"
   type    = "AAAA"
 }
+
+# installer
+resource "hetznerdns_record" "AAAA_installer_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name    = "installer"
+  value   = "2a01:4f9:6a:4f6f:ffff:ffff:ffff:ffff"
+  type    = "AAAA"
+}

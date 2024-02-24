@@ -129,3 +129,25 @@ resource "hetznerdns_record" "CNAME_metrics_monitoring_xnee_net" {
   value   = "monitoring"
   type    = "CNAME"
 }
+
+# Syncthing
+resource "hetznerdns_record" "A_sync_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "sync"
+  value   = "135.181.206.213"
+  type    = "A"
+}
+
+resource "hetznerdns_record" "AAAA_syncthing_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "sync"
+  value   = "2a01:4f9:c011:aeba::1"
+  type    = "AAAA"
+}
+
+resource "hetznerdns_record" "CNAME_metrics_sync_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "metrics.sync"
+  value   = "sync"
+  type    = "CNAME"
+}

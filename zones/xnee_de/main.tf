@@ -139,3 +139,10 @@ resource "hetznerdns_record" "AAAA_installer_xnee_de" {
   value   = "2a01:4f9:6a:4f6f:ffff:ffff:ffff:ffff"
   type    = "AAAA"
 }
+
+resource "hetznerdns_record" "AAAA_cache_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name    = "cache"
+  value   = "2a01:4f9:6a:4f6f::7"
+  type    = "AAAA"
+}

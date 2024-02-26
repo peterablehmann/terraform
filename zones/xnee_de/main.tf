@@ -117,9 +117,9 @@ resource "hetznerdns_record" "AAAA_proxmox_xnee_de" {
 }
 
 # proxmox-dhcp.xnee.de
-resource "hetznerdns_record" "AAAA_proxmox_dhcp_xnee_de" {
+resource "hetznerdns_record" "AAAA_dhcp_xnee_de" {
   zone_id = hetznerdns_zone.xnee_de.id
-  name    = "proxmox-dhcp"
+  name    = "dhcp"
   value   = "2a01:4f9:6a:4f6f::5"
   type    = "AAAA"
 }

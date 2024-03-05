@@ -146,3 +146,31 @@ resource "hetznerdns_record" "AAAA_cache_xnee_de" {
   value   = "2a01:4f9:6a:4f6f::7"
   type    = "AAAA"
 }
+
+resource "hetznerdns_record" "AAAA_garage1_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name    = "garage1"
+  value   = "2a01:4f9:6a:4f6f::8"
+  type    = "AAAA"
+}
+
+resource "hetznerdns_record" "AAAA_garage2_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name    = "garage2"
+  value   = "2a01:4f9:6a:4f6f::9"
+  type    = "AAAA"
+}
+
+resource "hetznerdns_record" "AAAA_garage3_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name    = "garage3"
+  value   = "2a01:4f9:6a:4f6f::10"
+  type    = "AAAA"
+}
+
+resource "hetznerdns_record" "AAAA_netbox_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name    = "netbox"
+  value   = "2a01:4f9:6a:4f6f::11"
+  type    = "AAAA"
+}

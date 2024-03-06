@@ -174,3 +174,10 @@ resource "hetznerdns_record" "AAAA_netbox_xnee_de" {
   value   = "2a01:4f9:6a:4f6f::11"
   type    = "AAAA"
 }
+
+resource "hetznerdns_record" "AAAA_authentik_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name    = "netbox"
+  value   = "2a01:4f9:6a:4f6f::12"
+  type    = "AAAA"
+}

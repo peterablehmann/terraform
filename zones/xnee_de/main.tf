@@ -171,6 +171,6 @@ resource "hetznerdns_record" "AAAA_garage3_xnee_de" {
 resource "hetznerdns_record" "AAAA_netbox_xnee_de" {
   zone_id = hetznerdns_zone.xnee_de.id
   name    = "netbox"
-  value   = "2a01:4f9:6a:4f6f::11"
+  value   = "2a01:4f9:6a:4f6f::b"
   type    = "AAAA"
 }

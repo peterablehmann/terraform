@@ -154,25 +154,11 @@ resource "hetznerdns_record" "AAAA_garage1_xnee_de" {
   type    = "AAAA"
 }
 
-resource "hetznerdns_record" "CNAME___garage1_xnee_de" {
-  zone_id = hetznerdns_zone.xnee_de.id
-  name    = "*.garage1"
-  value   = "garage1"
-  type    = "CNAME"
-}
-
 resource "hetznerdns_record" "AAAA_garage2_xnee_de" {
   zone_id = hetznerdns_zone.xnee_de.id
   name    = "garage2"
   value   = "2a01:4f9:6a:4f6f::9"
   type    = "AAAA"
-}
-
-resource "hetznerdns_record" "CNAME___garage2_xnee_de" {
-  zone_id = hetznerdns_zone.xnee_de.id
-  name    = "*.garage2"
-  value   = "garage2"
-  type    = "CNAME"
 }
 
 resource "hetznerdns_record" "AAAA_garage3_xnee_de" {
@@ -182,16 +168,30 @@ resource "hetznerdns_record" "AAAA_garage3_xnee_de" {
   type    = "AAAA"
 }
 
-resource "hetznerdns_record" "CNAME___garage3_xnee_de" {
-  zone_id = hetznerdns_zone.xnee_de.id
-  name    = "*.garage3"
-  value   = "garage3"
-  type    = "CNAME"
-}
-
 resource "hetznerdns_record" "AAAA_netbox_xnee_de" {
   zone_id = hetznerdns_zone.xnee_de.id
   name    = "netbox"
   value   = "2a01:4f9:6a:4f6f::b"
   type    = "AAAA"
+}
+
+resource "hetznerdns_record" "CNAME1_s3_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name = "s3"
+  value = "garage1"
+  type = "CNAME"
+}
+
+resource "hetznerdns_record" "CNAME2_s3_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name = "s3"
+  value = "garage2"
+  type = "CNAME"
+}
+
+resource "hetznerdns_record" "CNAME3_s3_xnee_de" {
+  zone_id = hetznerdns_zone.xnee_de.id
+  name = "s3"
+  value = "garage3"
+  type = "CNAME"
 }

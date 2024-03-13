@@ -119,7 +119,7 @@ resource "hetznerdns_record" "CNAME_metrics_mns_xnee_net" {
 resource "hetznerdns_record" "AAAA_monitoring_xnee_net" {
   zone_id = hetznerdns_zone.xnee_net.id
   name    = "monitoring"
-  value   = "2a01:4f9:6a:4f6f::2:1"
+  value   = "2a01:4f9:6a:4f6f::201"
   type    = "AAAA"
 }
 

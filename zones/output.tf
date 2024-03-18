@@ -17,7 +17,3 @@ output "xnee_de_zone_id" {
 output "xnee_net_zone_id" {
   value = module.xnee_net.zone_id
 }
-
-output "xxhe_de_zone_id" {
-  value = module.xxhe_de.zone_id
-}

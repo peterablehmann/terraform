@@ -17,7 +17,3 @@ module "xnee_de" {
 module "xnee_net" {
   source = "./xnee_net"
 }
-
-module "xxhe_de" {
-  source = "./xxhe_de"
-}

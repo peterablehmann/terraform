@@ -130,3 +130,18 @@ resource "hetznerdns_record" "AAAA_syncthing_xnee_net" {
   value   = "2a01:4f9:c011:aeba::1"
   type    = "AAAA"
 }
+
+# cache
+resource "hetznerdns_record" "A_cache_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "cache"
+  value   = "128.140.9.158"
+  type    = "A"
+}
+
+resource "hetznerdns_record" "AAAA_cache_xnee_net" {
+  zone_id = hetznerdns_zone.xnee_net.id
+  name    = "cache"
+  value   = "2a01:4f8:c2c:17c9::1"
+  type    = "AAAA"
+}
